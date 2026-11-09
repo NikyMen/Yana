@@ -1,16 +1,16 @@
 :root {
-  --violeta: #4a3a86;
-  --violeta-osc: #2f2560;
-  --lila: #c8b5e8;
-  --lila-suave: #ebe3f8;
-  --fondo: #f6f2fd;
+  --violeta: #276749;
+  --violeta-osc: #1c4934;
+  --lila: #b5d8bf;
+  --lila-suave: #e3f1e7;
+  --fondo: #f2f8f3;
   --blanco: #ffffff;
-  --texto: #2a2440;
-  --texto-suave: #6b6385;
+  --texto: #243d2e;
+  --texto-suave: #586f60;
   --wa: #1fa855;
   --wa-osc: #178a45;
   --radio: 18px;
-  --sombra: 0 6px 24px rgba(47, 37, 96, .10);
+  --sombra: 0 6px 24px rgba(28, 73, 52, .10);
   --serif: "Fraunces", Georgia, serif;
   --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -54,7 +54,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 /* ---------- Barra superior ---------- */
 .topbar {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(246, 242, 253, .88);
+  background: rgba(242, 248, 243, .88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--lila-suave);
 }
@@ -97,12 +97,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 .hero__logo { width: min(260px, 70%); height: auto; margin-bottom: 18px; }
 .hero__kicker { text-transform: uppercase; letter-spacing: .16em; font-size: 13px; color: var(--lila); margin: 0 0 10px; font-weight: 700; }
 .hero h1 { color: var(--blanco); font-size: clamp(30px, 4.2vw, 46px); max-width: 16ch; }
-.hero__sub { color: #e5ddf6; font-size: 17px; max-width: 42ch; margin: 16px 0 28px; }
+.hero__sub { color: #ddf0e3; font-size: 17px; max-width: 42ch; margin: 16px 0 28px; }
 .hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero__fotos { position: relative; height: 400px; }
 .hero__fotos img {
   position: absolute; object-fit: cover; border: 7px solid var(--blanco); border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(20, 12, 50, .35);
+  box-shadow: 0 18px 40px rgba(12, 40, 24, .35);
 }
 .hero__fotos .f1 { width: 56%; aspect-ratio: 1 / 1; left: 0; top: 10px; transform: rotate(-4deg); }
 .hero__fotos .f2 { width: 44%; aspect-ratio: 4 / 5; right: 2%; top: 0; transform: rotate(4deg); }
@@ -126,7 +126,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
   box-shadow: var(--sombra); display: flex; flex-direction: column;
   transition: transform .2s, box-shadow .2s;
 }
-.card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(47, 37, 96, .16); }
+.card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(28, 73, 52, .16); }
 .card__foto {
   position: relative; aspect-ratio: 1 / 1; background: var(--lila-suave);
   border: 0; padding: 0; display: block; width: 100%; overflow: hidden;
@@ -173,7 +173,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 }
 
 /* ---------- Pie ---------- */
-.pie { background: var(--violeta-osc); color: #e5ddf6; padding-block: 40px 90px; }
+.pie { background: var(--violeta-osc); color: #ddf0e3; padding-block: 40px 90px; }
 .pie__in { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
 .pie__links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; }
 .pie__links a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500; cursor: pointer; }
@@ -193,7 +193,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 
 /* ---------- Modal pieza ---------- */
 dialog { border: 0; padding: 0; color: var(--texto); }
-dialog::backdrop { background: rgba(30, 22, 64, .55); backdrop-filter: blur(3px); }
+dialog::backdrop { background: rgba(20, 45, 30, .55); backdrop-filter: blur(3px); }
 .modal {
   width: min(880px, 100% - 24px); max-height: calc(100dvh - 24px);
   border-radius: 22px; background: var(--blanco); overflow: auto;
