@@ -1,0 +1,272 @@
+{
+  "config": {
+    "whatsapp": "5493794802188",
+    "whatsappVisible": "3794-802188",
+    "instagram": "yana.ctes",
+    "diasSinStock": 4
+  },
+  "categorias": {
+    "bandejas": "Bandejas y alhajeros",
+    "velas": "Velas y sahumerios",
+    "macetas": "Macetas",
+    "figuras": "Figuras deco",
+    "hogar": "Hogar"
+  },
+  "productos": [
+    {
+      "id": "01",
+      "nombre": "Bandeja ovalada",
+      "categoria": "bandejas",
+      "medidas": "18 x 10 x 2 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "01_1.jpg"
+      ]
+    },
+    {
+      "id": "02",
+      "nombre": "Portavela flor de loto",
+      "categoria": "velas",
+      "medidas": "9 x 4,5 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "02_1.jpg",
+        "02_2.jpg"
+      ]
+    },
+    {
+      "id": "03",
+      "nombre": "Porta sahumerio",
+      "categoria": "velas",
+      "medidas": "18 x 10 x 2 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "03_1.jpg"
+      ]
+    },
+    {
+      "id": "04",
+      "nombre": "Fantasmita",
+      "categoria": "figuras",
+      "medidas": "5 x 6,1 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "04_2.jpg",
+        "04_1.jpg"
+      ]
+    },
+    {
+      "id": "05",
+      "nombre": "Frutillas",
+      "categoria": "figuras",
+      "medidas": "4,5 x 4 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "05_1.jpg"
+      ]
+    },
+    {
+      "id": "06",
+      "nombre": "Osito con corazón",
+      "categoria": "figuras",
+      "medidas": "5 x 4,8 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "06_1.jpg",
+        "06_2.jpg"
+      ]
+    },
+    {
+      "id": "07",
+      "nombre": "Cenicero de huella",
+      "categoria": "hogar",
+      "medidas": "5 x 6,1 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "07_1.jpg"
+      ]
+    },
+    {
+      "id": "08",
+      "nombre": "Mini tortuguitas",
+      "categoria": "figuras",
+      "medidas": "2,1 x 1,6 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "08_1.jpg",
+        "08_2.jpg"
+      ]
+    },
+    {
+      "id": "09",
+      "nombre": "Maceta con plato",
+      "categoria": "macetas",
+      "medidas": "13,6 x 2,2 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "09_2.jpg",
+        "09_1.jpg"
+      ]
+    },
+    {
+      "id": "10",
+      "nombre": "Planteritos / Portavela",
+      "categoria": "macetas",
+      "medidas": "Diámetro de la cavidad: 5 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "10_1.jpg",
+        "10_2.jpg"
+      ]
+    },
+    {
+      "id": "11",
+      "nombre": "Patito",
+      "categoria": "figuras",
+      "medidas": "4 x 4,5 x 3 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "11_2.jpg",
+        "11_1.jpg"
+      ]
+    },
+    {
+      "id": "12",
+      "nombre": "Bandeja profunda oval",
+      "categoria": "bandejas",
+      "medidas": "18 x 10,5 x 4 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "12_1.jpg",
+        "12_2.jpg"
+      ]
+    },
+    {
+      "id": "13",
+      "nombre": "Alhajero de tortuga",
+      "categoria": "bandejas",
+      "medidas": "Base 10,75 x 7,30 cm + tapa 6,50 x 3,35 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "13_1.jpg"
+      ]
+    },
+    {
+      "id": "14",
+      "nombre": "Maceta de elefante",
+      "categoria": "macetas",
+      "medidas": "13,4 x 8,2 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "14_1.jpg",
+        "14_2.jpg"
+      ]
+    },
+    {
+      "id": "15",
+      "nombre": "Bandeja ondulada",
+      "categoria": "bandejas",
+      "medidas": "21 x 14,5 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "15_2.jpg",
+        "15_1.jpg"
+      ]
+    },
+    {
+      "id": "16",
+      "nombre": "Portavela circular rayado",
+      "categoria": "velas",
+      "medidas": "8,2 x 3,9 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "16_2.jpg",
+        "16_1.jpg"
+      ]
+    },
+    {
+      "id": "17",
+      "nombre": "Plato para maceta",
+      "categoria": "macetas",
+      "medidas": "9 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "17_1.jpg",
+        "17_2.jpg"
+      ]
+    },
+    {
+      "id": "18",
+      "nombre": "Porta vaso mandala",
+      "categoria": "hogar",
+      "medidas": "10 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "18_2.jpg",
+        "18_1.jpg"
+      ]
+    },
+    {
+      "id": "19",
+      "nombre": "Bandeja hexagonal",
+      "categoria": "bandejas",
+      "medidas": "7,5 x 6,5 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "19_2.jpg",
+        "19_1.jpg"
+      ]
+    },
+    {
+      "id": "20",
+      "nombre": "Joyero / Caramelera",
+      "categoria": "bandejas",
+      "medidas": "8,5 x 10 cm",
+      "precio": null,
+      "descripcion": "",
+      "visible": true,
+      "fotos": [
+        "20_2.jpg",
+        "20_1.jpg"
+      ]
+    }
+  ]
+}

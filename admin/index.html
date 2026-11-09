@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel · Yana</title>
+  <meta name="theme-color" content="#4a3a86">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/img/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+
+<!-- Login -->
+<section class="login" id="vLogin" hidden>
+  <form class="login__caja" id="fLogin">
+    <img src="/img/logo-violeta.png" alt="Yana" width="140" height="48">
+    <h1>Panel de administración</h1>
+    <label class="campo">Contraseña
+      <input type="password" id="lPass" autocomplete="current-password" required autofocus>
+    </label>
+    <p class="error" id="lError" hidden></p>
+    <button class="btn btn--violeta btn--full" id="lBtn">Entrar</button>
+    <a href="/" class="link-suave">← Volver a la web</a>
+  </form>
+</section>
+
+<!-- Panel -->
+<div id="vApp" hidden>
+  <header class="barra">
+    <img src="/img/logo-violeta.png" alt="Yana" class="barra__logo" width="80" height="27">
+    <span class="estado" id="estado">Sin cambios</span>
+    <button class="btn btn--violeta" id="bPublicar" disabled>Publicar cambios</button>
+    <details class="menu">
+      <summary aria-label="Menú">⋯</summary>
+      <div class="menu__lista">
+        <a href="/" target="_blank" rel="noopener">Ver la web ↗</a>
+        <button id="bDescartar">Descartar cambios</button>
+        <button id="bSalir">Cerrar sesión</button>
+      </div>
+    </details>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="piezas" aria-selected="true">Piezas</button>
+    <button role="tab" data-tab="categorias" aria-selected="false">Categorías</button>
+    <button role="tab" data-tab="contacto" aria-selected="false">Contacto</button>
+  </nav>
+
+  <main class="contenido">
+    <!-- Piezas -->
+    <section data-panel="piezas">
+      <div class="herr">
+        <input type="search" id="buscar" placeholder="Buscar pieza…" aria-label="Buscar pieza">
+        <button class="btn btn--violeta" id="bNueva">+ Nueva pieza</button>
+      </div>
+      <ul class="lista" id="lista"></ul>
+    </section>
+
+    <!-- Categorías -->
+    <section data-panel="categorias" hidden>
+      <p class="ayuda">Son los filtros que aparecen arriba del catálogo. Solo se puede borrar una categoría si ninguna pieza la usa.</p>
+      <ul class="cats" id="cats"></ul>
+      <form class="herr" id="fCat">
+        <input id="nuevaCat" placeholder="Nueva categoría (ej: Llaveros)" required>
+        <button class="btn btn--violeta">Agregar</button>
+      </form>
+    </section>
+
+    <!-- Contacto -->
+    <section data-panel="contacto" hidden>
+      <div class="tarjeta form">
+        <label class="campo">WhatsApp (con código de país, sin + ni espacios)
+          <input id="cWa" inputmode="numeric" placeholder="5493794802188">
+        </label>
+        <label class="campo">WhatsApp como se muestra en la web
+          <input id="cWaVis" placeholder="3794-802188">
+        </label>
+        <label class="campo">Usuario de Instagram (sin @)
+          <input id="cIg" placeholder="yana.ctes">
+        </label>
+        <label class="campo">Días de entrega si no hay stock
+          <input id="cDias" type="number" min="0" max="60">
+        </label>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Editor de pieza -->
+<dialog class="editor" id="editor" aria-labelledby="eTitulo">
+  <form method="dialog" id="fEditor">
+    <header class="editor__head">
+      <button type="button" class="btn-txt" data-cerrar>Cancelar</button>
+      <h2 id="eTitulo">Editar pieza</h2>
+      <button class="btn btn--violeta btn--chico" id="eOk">Listo</button>
+    </header>
+    <div class="editor__cuerpo">
+      <div class="fotos">
+        <div class="fotos__titulo">Fotos <small>La primera es la principal. Podés subir desde el celu.</small></div>
+        <div class="fotos__grilla" id="eFotos"></div>
+      </div>
+      <div class="fila">
+        <label class="campo campo--chico">N°<input id="eId" required maxlength="10"></label>
+        <label class="campo">Nombre<input id="eNombre" required maxlength="80"></label>
+      </div>
+      <div class="fila">
+        <label class="campo">Categoría<select id="eCat"></select></label>
+        <label class="campo">Precio ($)<input id="ePrecio" type="number" min="0" step="1" inputmode="numeric" placeholder="Vacío = Consultar precio"></label>
+      </div>
+      <label class="campo">Medidas<input id="eMedidas" maxlength="120" placeholder="Ej: 18 x 10 x 2 cm"></label>
+      <label class="campo">Descripción (opcional)<textarea id="eDesc" rows="3" maxlength="1000" placeholder="Algo lindo sobre la pieza…"></textarea></label>
+      <label class="switch"><input type="checkbox" id="eVisible"><span></span>Mostrar en la web</label>
+      <p class="error" id="eError" hidden></p>
+      <button type="button" class="btn-borrar" id="eBorrar">Eliminar esta pieza</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Progreso de publicación -->
+<dialog class="progreso" id="progreso">
+  <div class="progreso__in">
+    <div class="spinner" id="pSpin"></div>
+    <h3 id="pTitulo">Publicando…</h3>
+    <p id="pTexto"></p>
+    <button class="btn btn--violeta" id="pOk" hidden>Listo</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/admin/admin.js"></script>
+</body>
+</html>

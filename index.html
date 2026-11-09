@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yana · Deco en yeso cerámico</title>
+  <meta name="description" content="Piezas de yeso cerámico para decorar tu casa: bandejas, portavelas, macetas y figuras. Corrientes. Pedidos por WhatsApp.">
+  <meta name="theme-color" content="#4a3a86">
+  <meta property="og:title" content="Yana · Deco en yeso cerámico">
+  <meta property="og:description" content="Bandejas, portavelas, macetas y figuras en yeso cerámico. Pedidos por WhatsApp.">
+  <meta property="og:image" content="/img/portada-915.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/img/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a href="#" class="topbar__logo" aria-label="Yana, inicio"><img src="img/logo-violeta.png" alt="Yana" width="96" height="33"></a>
+    <nav class="topbar__nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-pedir">Cómo pedir</a>
+    </nav>
+    <button class="btn-pedido" id="abrirPedido" aria-label="Ver mi pedido">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="btn-pedido__txt">Mi pedido</span>
+      <span class="badge" id="contador" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__texto">
+      <img class="hero__logo" src="img/logo-claro.png" alt="Yana" width="598" height="205">
+      <p class="hero__kicker">Objetos deco &amp; hogar</p>
+      <h1>Piezas de yeso cerámico para darle onda a tu casa</h1>
+      <p class="hero__sub">Elegí tus favoritas, armá tu pedido y te lo confirmamos por WhatsApp con colores y diseños disponibles.</p>
+      <div class="hero__ctas">
+        <a href="#catalogo" class="btn btn--claro">Ver catálogo</a>
+        <a class="btn btn--borde js-wa" data-msg="¡Hola Yana! Vi la web y quería hacerte una consulta 😊">Escribinos</a>
+      </div>
+    </div>
+    <div class="hero__fotos" aria-hidden="true">
+      <img src="img/portada-915.jpg" alt="" class="f1">
+      <img src="img/portada-918.jpg" alt="" class="f2">
+      <img src="img/portada-921.jpg" alt="" class="f3">
+    </div>
+  </div>
+</section>
+
+<main id="catalogo" class="catalogo">
+  <div class="wrap">
+    <div class="catalogo__head">
+      <h2>Catálogo</h2>
+      <p>Todas las piezas se hacen en distintos colores y diseños. ¡Consultanos!</p>
+    </div>
+    <div class="filtros" id="filtros" role="tablist" aria-label="Categorías"></div>
+    <div class="grilla" id="grilla"></div>
+  </div>
+</main>
+
+<section id="como-pedir" class="pasos">
+  <div class="wrap">
+    <h2>¿Cómo pedir?</h2>
+    <ol class="pasos__lista">
+      <li><span>1</span><h3>Elegí tus piezas</h3><p>Tocá “Agregar” en las que te gusten. Podés sumar varias y elegir cantidades.</p></li>
+      <li><span>2</span><h3>Mandá tu pedido</h3><p>Desde “Mi pedido” se abre WhatsApp con la lista ya escrita. Solo tenés que enviarla.</p></li>
+      <li><span>3</span><h3>Coordinamos</h3><p>Te contamos colores y diseños disponibles, precio final y la entrega. Pagás en efectivo o transferencia.</p></li>
+    </ol>
+    <p class="aviso"><strong>Aclaración:</strong> si no tenemos en stock el color, diseño o pieza elegida, la entrega se realiza <strong><span id="dias">4</span> días después del pedido</strong>. Sin excepción.</p>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="wrap pie__in">
+    <img src="img/logo-claro.png" alt="Yana" width="120" height="41">
+    <div class="pie__links">
+      <a class="js-wa" data-msg="¡Hola Yana! 😊">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span id="pieWa">3794-802188</span>
+      </a>
+      <a id="pieIg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg><span>@yana.ctes</span>
+      </a>
+    </div>
+    <p class="pie__pago">Efectivo · Transferencia</p>
+  </div>
+</footer>
+
+<a class="wa-flotante js-wa" data-msg="¡Hola Yana! Vi la web y quería hacerte una consulta 😊" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<!-- Detalle de pieza -->
+<dialog class="modal" id="modal" aria-labelledby="mTitulo">
+  <button class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+  <div class="modal__cuerpo">
+    <div class="galeria">
+      <img id="mFoto" alt="">
+      <div class="galeria__mini" id="mMinis"></div>
+    </div>
+    <div class="modal__info">
+      <span class="num" id="mNum"></span>
+      <h3 id="mTitulo"></h3>
+      <p class="cat" id="mCat"></p>
+      <p class="desc" id="mDesc" hidden></p>
+      <dl>
+        <dt>Medidas aprox.</dt><dd id="mMedidas"></dd>
+        <dt>Precio</dt><dd id="mPrecio"></dd>
+        <dt>Pago</dt><dd>Efectivo o transferencia</dd>
+      </dl>
+      <p class="nota">Consultá colores y diseños disponibles.</p>
+      <div class="cant">
+        <span>Cantidad</span>
+        <div class="stepper"><button data-paso="-1" aria-label="Menos">−</button><output id="mCant">1</output><button data-paso="1" aria-label="Más">+</button></div>
+      </div>
+      <button class="btn btn--violeta btn--full" id="mAgregar">Agregar a mi pedido</button>
+      <a class="btn btn--wa btn--full" id="mWa"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Consultar solo esta pieza</a>
+    </div>
+  </div>
+</dialog>
+
+<!-- Mi pedido -->
+<dialog class="cajon" id="cajon" aria-labelledby="cTitulo">
+  <div class="cajon__head">
+    <h3 id="cTitulo">Mi pedido</h3>
+    <button class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+  </div>
+  <div class="cajon__lista" id="cLista"></div>
+  <div class="cajon__pie" id="cPie">
+    <label class="campo">Tu nombre (opcional)<input id="cNombre" autocomplete="name" placeholder="Ej: Sofi"></label>
+    <label class="campo">¿Algún color o detalle? (opcional)<textarea id="cNota" rows="2" placeholder="Ej: la bandeja en rosa"></textarea></label>
+    <a class="btn btn--wa btn--full" id="cEnviar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Enviar pedido por WhatsApp</a>
+    <p class="cajon__aclara">No se cobra nada acá: te respondemos por WhatsApp para confirmar.</p>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.16-1.5A9.92 9.92 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.06.89.9-2.98-.2-.31a8.18 8.18 0 1 1 6.84 3.73Zm4.5-6.12c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.55.12-.17.24-.64.8-.78.96-.15.17-.29.19-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.17.04-.31-.02-.43l-.75-1.82c-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.85 2.03 4.76 4.76 0 0 0 1 2.53c.12.17 1.73 2.64 4.2 3.7 1.56.68 2.17.73 2.95.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM16.4 2H7.6A5.6 5.6 0 0 0 2 7.6v8.8A5.6 5.6 0 0 0 7.6 22h8.8a5.6 5.6 0 0 0 5.6-5.6V7.6A5.6 5.6 0 0 0 16.4 2Zm3.8 14.4a3.8 3.8 0 0 1-3.8 3.8H7.6a3.8 3.8 0 0 1-3.8-3.8V7.6a3.8 3.8 0 0 1 3.8-3.8h8.8a3.8 3.8 0 0 1 3.8 3.8v8.8Z"/></symbol>
+</svg>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "yana",
+  "private": true,
+  "type": "module",
+  "description": "Catálogo web de Yana con panel /admin",
+  "engines": {
+    "node": ">=20"
+  }
+}

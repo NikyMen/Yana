@@ -1,0 +1,12 @@
+{
+  "name": "Yana · Deco en yeso cerámico",
+  "short_name": "Yana",
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#4a3a86",
+  "background_color": "#f6f2fd",
+  "display": "standalone",
+  "start_url": "/"
+}
